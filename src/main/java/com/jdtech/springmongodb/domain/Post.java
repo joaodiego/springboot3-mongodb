@@ -16,6 +16,7 @@ public class Post implements Serializable {
 	private Date date;
 	private String title;
 	private String body;
+	private User user;
 	
 	public Date getDate() {
 		return date;
@@ -61,17 +62,19 @@ public class Post implements Serializable {
 		Post other = (Post) obj;
 		return Objects.equals(id, other.id);
 	}
-	public Post(String id, Date date, String title, String body) {
+	public Post(String id,User user, Date date, String title, String body) {
 		super();
 		this.id = id;
+		this.user = user;
 		this.date = date;
 		this.title = title;
 		this.body = body;
 	}
 	@Override
 	public String toString() {
-		return "Post [id=" + id + ", date=" + date + ", title=" + title + ", body=" + body + "]";
+		return "Post [id=" + id + ", date=" + date + ", title=" + title + ", body=" + body + ", user=" + user + "]";
 	}
+	
 	
 	
 

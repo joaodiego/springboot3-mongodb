@@ -28,7 +28,6 @@ public class PostService {
 
 	public void delete(String id) {
 		findById(id);
-		System.out.println("Passou por aqui");
 		repo.deleteById(id);
 
 	}
