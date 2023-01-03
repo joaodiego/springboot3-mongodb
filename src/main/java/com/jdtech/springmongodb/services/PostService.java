@@ -35,5 +35,9 @@ public class PostService {
 	public Post insert(Post obj) {
 		return repo.save(obj);
 	}
+	
+	public List<Post> findByTitle(String title){
+		return repo.findByTitle(title);
+	}
 
 }
